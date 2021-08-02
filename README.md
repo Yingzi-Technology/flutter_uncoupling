@@ -6,12 +6,12 @@
 uncoupling使用了标记的方式，直接操作文件代码以实现代码物理方式的灵活插入与抽取，对工程没有任何侵入性，简单易用。
 
 # 使用方式
-将uncoupling目录拖入工程根目录（原则上适用于任何目录）。
+将uncoupling目录拖入工程根目录（原则上适用于任何目录），示例请参考代码中的 demo 演示代码。
 
 ### 步骤1：在需要解耦的地方添加标记节点。
-> ///@@[plugin.node]@begin
-> ///[content]
-> ///@@[plugin.node]@end
+> ///@@[plugin.node]@begin  
+> [your code]  
+> ///@@[plugin.node]@end  
 
 ### 步骤2：在uncoupling/run.dart中配置标记节点及内容
 > var _pluginNodeContent = {
